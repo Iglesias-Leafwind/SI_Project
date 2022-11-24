@@ -1,0 +1,24 @@
+First arrange your data to a format spacy can read and create the model:
+	we used Demo Train NER script we created with
+		some stuff we wanted to train.
+
+Download base_config using the website and the specifications
+	of what we want to train:
+		https://spacy.io/usage/training#config
+
+With the base config file open this file and edit:
+		train = null
+		dev = null
+	to something you will use for example:
+		train = "./marvelNER_train.spacy"
+		dev = "./marvelNER_valid.spacy"
+
+After that run the following command to compile the config file
+	into a format spacy uses:
+python -m spacy init fill-config base_config.cfg config.cfg
+
+Now that we have the config file ready we just need to run 
+	the following command to start training the data:
+python -m spacy train config.cfg --output ./marvelNERModel
+
+After that you can use the model like any other spacy model

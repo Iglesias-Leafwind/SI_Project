@@ -1,0 +1,4 @@
+download ner model using the following link:
+https://drive.google.com/file/d/1STnlFe7ME8nOD8BwWlflWxkU2Hq1-mEh/view?usp=sharing
+then export it in this folder and it should look like this:
+./marvelNERModel/model-last

@@ -1,0 +1,3 @@
+imparaai-checkers~=1.4.2
+Owlready2~=0.37
+pyswip~=0.2.10

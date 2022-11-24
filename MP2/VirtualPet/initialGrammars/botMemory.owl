@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="file:///mnt/d/Universidade/SI/miniproject-group3/MP2/Characters/botMemory.owl"
+         xmlns="file:///mnt/d/Universidade/SI/miniproject-group3/MP2/Characters/botMemory.owl#">
+
+<owl:Ontology rdf:about="file:///mnt/d/Universidade/SI/miniproject-group3/MP2/Characters/botMemory.owl"/>
+
+<owl:ObjectProperty rdf:about="#has_likes">
+  <rdfs:domain rdf:resource="#entity"/>
+  <rdfs:range rdf:resource="#likes"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_dislikes">
+  <rdfs:domain rdf:resource="#entity"/>
+  <rdfs:range rdf:resource="#dislikes"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_movies">
+  <rdfs:domain rdf:resource="#likes"/>
+  <rdfs:range rdf:resource="#movies"/>
+  <rdfs:domain rdf:resource="#dislikes"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_characters">
+  <rdfs:domain rdf:resource="#likes"/>
+  <rdfs:range rdf:resource="#characters"/>
+  <rdfs:domain rdf:resource="#dislikes"/>
+  <rdfs:domain rdf:resource="#movies"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#star_in">
+  <rdfs:domain rdf:resource="#characters"/>
+  <rdfs:range rdf:resource="#movies"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#entityName">
+  <rdfs:domain rdf:resource="#entity"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#description">
+  <rdfs:domain rdf:resource="#movies"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:domain rdf:resource="#characters"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#entity">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#likes">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#dislikes">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#movies">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#characters">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<likes rdf:about="#loves">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</likes>
+
+<dislikes rdf:about="#hates">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</dislikes>
+
+<entity rdf:about="#bot">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <entityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></entityName>
+</entity>
+
+<entity rdf:about="#user">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <entityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></entityName>
+</entity>
+
+<movies rdf:about="#movieironman1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008's Iron Man tells the story of Tony Stark, a billionaire industrialist and genius inventor who is kidnapped and forced to build a devastating weapon. Instead, using his intelligence and ingenuity, Tony builds a high-tech suit of armor and escapes captivity. When he uncovers a nefarious plot with global implications, he dons his powerful armor and vows to protect the world as Iron Man.</description>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Playboy and visionary industrial genius Tony Stark, CEO of leading military defense contractor, Stark Industries, is in war-torn Kunar, Afghanistan, to demonstrate his company's new Jericho missile. With him is his friend and military liaison, Lieutenant Colonel James Rhodes, a member of the U.S. Air Force.</description>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">While riding in a transport convoy, Stark is critically wounded in an ambush and held captive in a cave by the Ten Rings. An electromagnet built by fellow captive Ho Yinsen keeps the shrapnel that wounded Stark from reaching his heart and killing him. The Ten Rings leader, Raza, offers Stark freedom; in exchange, Stark must build a Jericho missile for the terrorists. Stark and Yinsen agree that Raza will not keep his word of letting Stark live.</description>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">While pretending to work on the missile, Stark and Yinsen secretly build a powerful electric generator called an Arc Reactor to power Stark's electromagnet. They then begin to build a powered suit of armor, designed by Stark, to help them escape. The Ten Rings ambush the workshop when they discover Stark's plan, but Yinsen sacrifices himself to distract them while Stark's suit powers up. Using the armored suit, Stark fights his way out of the cave to find a mortally wounded Yinsen, who reassures Stark and urges him to continue his escape and not waste his life. An enraged Stark leaves the cave, burns the terrorist's stockpile of Stark Industries-produced weapons, and flies away. Having escaped, Stark crashes in the desert, which destroys the suit.</description>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">After being rescued by a search party, including Rhodes, Stark returns home. He calls a press conference to announce that his company will no longer manufacture weapons, having seen first-hand the strife that they cause in the wrong hands. Obadiah Stane, his father's old partner and the company's manager, informs Stark that this may ruin Stark Industries and his father's legacy.</description>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In his home workshop, Stark spends the next few months building an improved version of his suit, as well as a more powerful arc reactor for his chest. At Stark's first public appearance after his return, Christine Everhart informs him that Stark Industries weapons, including the Jericho missile, were recently delivered to the Ten Rings and are being used to attack Gulmira, Yinsen's home village. Stark confronts Stane about the supplied weapons and learns that Stane is trying to replace him as head of the company.</description>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enraged, Stark dons his new armor and flies to Afghanistan, where he saves the citizens of Gulmira from the Ten Rings' wrath. While flying home, Stark is engaged by two F-22 Raptors on behalf of the U.S. Air Force. He phones Rhodes and reveals his identity in an attempt to call off the attack. Meanwhile, the Ten Rings gather the pieces of Stark's prototype suit. Raza meets with Stane and offers to exchange the suit with him. However, Stane has Raza and his faction eliminated, taking the suit for himself. Returning to Stark Industries, Stane orders his scientists to have a new suit reverse-engineered from the wreckage.</description>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seeking to find any other weapons delivered to the Ten Rings, Stark sends his trusted personal assistant, Pepper Potts, to hack into the company computer system from Stane's office. Potts finds evidence of Stane supplying weapons to the terrorists, but also discovers that Stane had initially hired the Ten Rings to kill Stark in Afghanistan. After an uncomfortable encounter with a suspicious Stane, Potts meets with Phil Coulson of the Strategic Homeland Intervention, Enforcement and Logistics Division to inform him of Stane's activities.</description>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stane's scientists reveal that they cannot finish his suit, as no one can manage to duplicate Stark's Arc Reactor. Stane ambushes Stark at his home, using a Sonic Taser to paralyze him and take his current Arc Reactor. Left to die, Stark manages to crawl to his lab and saves himself by re-using his original arc reactor. Potts and several S.H.I.E.L.D. agents attempt to arrest Stane, but he dons his suit and attacks them. Stark fights Stane, but is outmatched without his upgraded reactor to run his suit at full capacity.</description>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stark lures Stane atop the Stark Industries building and instructs Potts to overload the large Arc Reactor there. Doing so unleashes a massive electrical surge that knocks Stane unconscious, causing him and his armor to fall into the exploding reactor, killing him. The next day, the press has dubbed the armored hero "Iron Man." Agent Coulson gives Stark a cover story to explain the events of the night and Stane's death. At a press conference, Stark begins giving the cover story, but then instead announces that he is Iron Man, shocking the public as the crowd of interviewers suddenly begin roaring out questions, much to Rhodes' confusion.</description>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Afterward, Nick Fury visits Stark at his home, stating that Iron Man is not "the only superhero in the world," and wants to discuss the Avengers Initiative.</description>
+</movies>
+
+<characters rdf:about="#characterironman">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anthony Edward "Tony" Stark was a billionaire industrialist, a founding member of the Avengers, and the former CEO of Stark Industries. A brash but brilliant inventor, Stark was self-described as a genius, billionaire, playboy, and philanthropist. With his great wealth and exceptional technical knowledge, Stark was one of the world's most powerful men following the deaths of his parents and enjoyed the playboy lifestyle for many years until he was kidnapped by the Ten Rings in Afghanistan, while demonstrating a fleet of Jericho missiles. With his life on the line, Stark created an armored suit which he used to escape his captors. Upon returning home, he utilized several more armors to use against terrorists, as well as Obadiah Stane who turned against Stark. Following his fight against Stane, Stark publicly revealed himself as Iron Man.</description>
+</characters>
+
+
+</rdf:RDF>
